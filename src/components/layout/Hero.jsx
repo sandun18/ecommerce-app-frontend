@@ -1,31 +1,43 @@
-import React from 'react'
-import { assets } from '../../assets/assets'
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { assets } from '../../assets/assets';
 
-const Hero = () => {
+export default function Hero() {
   return (
-    <div className='flex flex-col sm:flex-row border border-gray-400'>
-      {/* Hero Left Side */}
-      <div className='w-full sm:w-1/2 flex items-center justify-center py-10 sm:py-0'>
-        <div className='text-[#414141]'>
-          <div className='flex items-center gap-2'>
-            <p className='w-8 md:w-11 h-[2px] bg-[#414141]'></p>
-            <p className='font-medium text-5m md:text-base'>OUR BESTSELLERS</p>
+    <section className="border border-gray-200 bg-white">
+      <div className="grid grid-cols-1 md:grid-cols-2">
+        {/* Left copy */}
+        <div className="px-6 md:px-10 py-12 md:py-16 flex flex-col justify-center">
+          <div className="flex items-center gap-3">
+            <span className="w-10 h-px bg-gray-800" aria-hidden="true" />
+            <p className="text-[11px] tracking-[0.22em] font-light text-gray-600">
+              OUR BESTSELLERS
+            </p>
           </div>
-          <h1 className='text-3xl sm:py-3 lg:text-5xl leading-relaxed'>
+
+          <h1 className="mt-6 text-4xl md:text-5xl font-light tracking-wide text-gray-900">
             Latest Arrivals
           </h1>
-          <div className='flex items-center gap-2'>
-            <p className='font-semibold text-sm md:text-base'>SHOP NN</p>
-            <p className='w-8 md:w-11 h-[1px] bg-[#414141]'></p>
+
+          <div className="mt-8">
+            <Link
+              to="/collection"
+              className="inline-flex items-center justify-center bg-black text-white text-xs tracking-[0.2em] px-7 py-3"
+            >
+              SHOP NOW
+            </Link>
           </div>
         </div>
+
+        {/* Right image */}
+        <div className="h-[360px] md:h-auto">
+          <img
+            src={assets.hero_img}
+            alt="Fashion model"
+            className="w-full h-full object-cover"
+          />
+        </div>
       </div>
-
-      {/* Hero Right Side */}
-      <img className='w-full sm:w-1/2' src={assets.hero_img} alt='' />
-    </div>
-  )
+    </section>
+  );
 }
-
-export default Hero
-
