@@ -2,7 +2,7 @@ import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 
 import Home from './pages/Home';
-import Collection from './pages/collection';
+import Collection from './pages/Collection';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import Product from './pages/Product';
@@ -14,8 +14,9 @@ import Order from './pages/Orders';
 import Navbar from './components/layout/Navbar';
 
 function App() {
-  return (
-    <div className="px-4 sm:px-[5vw] lg:px-[9vw]">
+ return (
+  <div className="min-h-screen bg-gray-50">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <Navbar />
 
       <Routes>
@@ -30,6 +31,7 @@ function App() {
         <Route path="/orders" element={<Order />} />
       </Routes>
     </div>
+  </div>
   );
 }
 

@@ -4,10 +4,10 @@ import { assets } from '../../assets/assets';
 
 export default function Hero() {
   return (
-    <section className="border border-gray-200 bg-white">
+    <section className="rounded-2xl overflow-hidden border border-gray-200 bg-white shadow-sm">
       <div className="grid grid-cols-1 md:grid-cols-2">
         {/* Left copy */}
-        <div className="px-6 md:px-10 py-12 md:py-16 flex flex-col justify-center">
+        <div className="px-6 md:px-12 py-14 md:py-20 flex flex-col justify-center bg-gradient-to-br from-white to-gray-50">
           <div className="flex items-center gap-3">
             <span className="w-10 h-px bg-gray-800" aria-hidden="true" />
             <p className="text-[11px] tracking-[0.22em] font-light text-gray-600">
@@ -15,7 +15,7 @@ export default function Hero() {
             </p>
           </div>
 
-          <h1 className="mt-6 text-4xl md:text-5xl font-light tracking-wide text-gray-900">
+          <h1 className="mt-6 text-4xl md:text-6xl font-light tracking-tight text-gray-900 leading-tight">
             Latest Arrivals
           </h1>
 
